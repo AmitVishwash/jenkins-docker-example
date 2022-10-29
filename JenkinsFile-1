@@ -1,0 +1,17 @@
+pipeline{
+
+agent {
+
+   docker{image 'node:16-alpine3.16'}
+ }
+ 
+ stages{
+ 
+	stage('Print Hello World'){
+		steps {
+        sh 'node --version'
+      }
+
+	}
+ }
+}
